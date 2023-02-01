@@ -24,7 +24,7 @@ function handleSubmit(event) {
   const amount = Number(formElements.amount.value);
   const step = Number(formElements.step.value);
 
-  for (let position = 2; position <= amount; position++) {
+  for (let position = 1; position <= amount; position++) {
     createPromise(position, delay)
       .then(({ position, delay }) => {
         Notiflix.Notify.success(
